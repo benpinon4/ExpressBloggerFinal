@@ -17,7 +17,7 @@ const validateBlogData = (data) => {
             message: "The author field must be defined, and a string type value."
         }
     }
-    if(data.email === undefined || data.email.includes("@") !== true || data.email.split("@").length > 1 || typeof(data.email) !== "string"){
+    if(data.email === undefined || data.email.includes("@") !== true || data.email.split("@").length > 2 || typeof(data.email) !== "string"){
         return {
             isValid:  false,
             message: "The email field must be defined, a string and contain only 1 @ symbol."
